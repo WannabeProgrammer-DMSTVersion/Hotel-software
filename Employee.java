@@ -1,117 +1,55 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Employee {
-	private static String name;
-	private static double age;
-	private static int jobs;
-	private static String healthy;
-	private static String smoker;
-	private static int languages;
-	private static String photo;
-	private static String[] Lang1 = new String[languages];// περιέχει τα ονόματα των ξένων γλωσσών
-	private static int[] Jobs1 = new int[jobs];//περιέχει χρονικό διάστημα δουλειάς σε μήνες
-	private static String[] Lang2 = new String[languages];// περιέχει επίπεδο ξένης γλώσσας
-	private static String[] Jobs2 = new String[jobs];//περιέχει είδος δουλειάς
-
-	public static void setName(String name) {
-		Employee.name = name;
+	private String name;
+	private String surname;
+    private int yearOfBirth;
+    private int jobCount;
+    private int howLang;
+    ArrayList<String[]> jobs = new ArrayList<String[]>();
+    String[][] Languages = new String[jobCount][2];
+	public String getName() {
+		return name;
 	}
-
-	public static double getAge() {
-		return age;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public static void setAge(double age) {
-		Employee.age = age;
+	public String getSurname() {
+		return surname;
 	}
-
-	public static int getJobs() {
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	public int getHowLang() {
+		return howLang;
+	}
+	public void setHowLang(int howLang) {
+		this.howLang = howLang;
+	}
+	public int getYearOfBirth() {
+		return yearOfBirth;
+	}
+	public void setYearOfBirth(int yearOfBirth) {
+		this.yearOfBirth = yearOfBirth;
+	}
+	public int getJobCount() {
+		return jobCount;
+	}
+	public void setJobCount(int jobCount) {
+		this.jobCount = jobCount;
+	}
+	public ArrayList<String[]> getJobs() {
 		return jobs;
 	}
-
-	public static void setJobs(int jobs) {
-		Employee.jobs = jobs;
-	}
-
-	public static String getHealthy() {
-		return healthy;
-	}
-
-	public static void setHealthy(String healthy) {
-		Employee.healthy = healthy;
-	}
-
-	public static String getSmoker() {
-		return smoker;
-	}
-
-	public static void setSmoker(String smoker) {
-		Employee.smoker = smoker;
-	}
-
-	public static int getLanguages() {
-		return languages;
-	}
-
-	public static void setLanguages(int languages) {
-		Employee.languages = languages;
-	}
-
-	public static String getPhoto() {
-		return photo;
-	}
-
-	public static void setPhoto(String photo) {
-		Employee.photo = photo;
-	}
-
-	public String[] getLang1() {
-		return Lang1;
-	}
-
-	public void setLang1(String[] lang1) {
-		Lang1 = lang1;
-	}
-
-	public String[] getLang2() {
-		return Lang2;
-	}
-
-	public void setLang2(String[] lang2) {
-		Lang2 = lang2;
-	}
-
-	public String[] getJobs2() {
-		return Jobs2;
-	}
-
-	public void setJobs2(String[] jobs2) {
-		Jobs2 = jobs2;
-	}
-
-	public void setJobs1(int[] jobs1) {
-		Jobs1 = jobs1;
-	}
-
-	public int[] getJobs1() {
-		return Jobs1;
-	}
-
-public Employee(String name, double age, int jobs, String healthy, String smoker, int languages, String photo,
-			String[]lang1, String[]lang2, int[]jobs1, String[]jobs2) {
-		this.name = name;
-		this.age = age;
+	public void setJobs(ArrayList<String[]> jobs) {
 		this.jobs = jobs;
-		this.healthy = healthy;
-		this.smoker = smoker;
-		this.languages = languages;
-		this.photo = photo;
-		this.Lang1 = lang1;
-		this.Jobs1 = jobs1;
-		this.Lang2 = lang2;
-		this.Jobs2 = jobs2;
-
 	}
-}
-
+    public Employee(String name, String surname, int yearOfBirth, int howLang) {
+    	this.name = name;
+    	this.surname = surname;
+    	this.yearOfBirth = yearOfBirth;
+    	this.jobCount = jobCount;
+    	this.howLang = howLang;
+    }
+    
+}    
